@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-height:100%;
+  font-family:"Microsoft YaHei","微软雅黑","Microsoft JhengHei","华文细黑",STHeiti,MingLiu,"Helvetica Neue","宋体",serif!important;
+  min-width:1240px;
+  position:relative;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  background:#fafafa;
+  line-height:1;
+}
+body{
+  color:4a4a4a;
+  font-size:1rem;
+  font-weight:400;
+}
+* {
+  box-sizing:inherit;
+}
+:before, :after{
+  box-sizing:inherit;
+}
+.header-content{
+  width:100%;
+  background-color:#1a1c2f;
+  color:adadad;
+  font-size:15px;
+  text-rendering:optimizeLegibility;
+}
+.header-content .block_header_nav{
+  width:1220px;
+  margin:0 auto;
+  background-color:inherit;
+}
+.nav{
+  align-items:stretch;
+  display:flex;
+  min-height:50px;
+  position:relative;
+  text-align:center;
+  z-index:2;
+}
+.header-content .block_header_nav .container{
+  padding:0;
+}
+.nav>.container{
+  align-items:stretch;
+  display:flex;
+  min-height:50px;
+  width:100%;
+}
+.container{
+  max-width:1220px;
+  margin:0 auto;
+  position:relative;
+}
+.header-content .block_header_nav .block_header_navleft{
+  height:100px;
+}
+.nav .container .nav-left{
+  flex-grow:2;
+}
+.nav-left{
+  align-items:stretch;
+  display:flex;
+  flex-basis:0;
+  flex-grow:1;
+  flex-shrink:0;
+  justify-content:flex-start;
+  overflow:hidden;
+  overflow-x:auto;
+  white-space:nowrap;
+}
+.nav .container .nav-left .nav-item{
+  color:#adadad;
+  font-size:18px;
+}
+.nav-item{
+  align-items:center;
+  display:flex;
+  flex-grow:0;
+  flex-shrink:0;
+  justify-content:center;
+  padding:10px;
+}
+a {
+  text-decoration:none;
+  color:#3c81df;
+  cursor:pointer;
+  text-decoration:none;
+  transition:none 86ms ease-out;
+}
+.header-content .block_header_nav .block_header_navleft .logo-container{
+  display:inline-block;
+  width:187px;
+  height:51px;
+  background:url(static/picture/logo_eec50e3.png);
+  background-size:187px 51px;
+}
+span {
+  font-style:inherit;
+  font-weight:inherit;
+}
+.header-content .block_header_nav .block_header_list{
+  height:100px;
+  line-height:100px;
+  color:#adadad;
+  background-color:inherit;
+  margin:0;
+}
+.nav-right{
+  align-items:stretch;
+  display:flex;
+  flex-basis:0;
+  flex-grow:1;
+  flex-shrink:0;
+  justify-content:flex-end;
+}
+ul{
+  list-style:none;
+  padding:0;
+}
+.header-content .block_header_nav .block_header_list li{
+  padding-right:0;
+  padding-left:0;
+}
+li {
+  margin:0;
+  padding:0;
+}
+.header-content .block_header_nav .block_header_list li a.active{
+  color:#fff;
+  font-weight:700;
+}
+.header-content .block_header_nav .block_header_list a{
+  color:inherit;
+  padding-left:0;
+  padding-right:0;
+}
+.nav-item a{
+  flex-grow:1;
+  flex-shrink:0;
+}
+.nav>.container>.nav-right>.nav-item:last-child:not(.is-tab){
+  padding-right:0;
+}
+.header-content .block_header_nav .block_header_list li.has-point{
+  margin-left:45px;
+}
+.header-content .block_header_nav .block_header_list li{
+  padding-right:0;
+  padding-left:0;
+}
+.header-content .block_header_nav .controlbar{
+  margin-left:45px;
+  padding-top:35px;
+  height:59px;
+  flex-basis:auto;
+  flex-grow:0;
+}
+.header-content .block_header_nav .controlbar .unverifed{
+  color:#adadad;
+}
+.header-content .block_header_nav .controlbar .unverifed a.button-login{
+  height:28px;
+  color:inherit;
+  background-color:inherit;
+  border-radius:3px;
+  padding:0!important;
+  font-size:15px;
+}
+.nav .container .nav-right .split-line{
+  display:inline-block;
+  width:45px;
+  height:28px;
+  line-height:28px;
+}
+.header-content .block_header_nav .controlbar .unverifed a.button-regist{
+  height:28px;
+  color:inherit;
+  background-color:inherit;
+  border-radius:3px;
+  padding:0!important;
+  font-size:15px;
+}
+.headFigureContainer{
+  position:relative;
+  height:528px;
+}
+.nightCover{
+  background-color:#191b1d!important;
+}
+.headFigureContainer .headFigure .banner{
+  position:relative;
+  left:50%;
+  margin-left:-610px;
+  max-width:1220px;
+}
+img {
+  height:auto;
+}
+.headFigureContainer .headFigure .textContainer{
+  width:1220px;
+  height:528px;
+  position:absolute;
+  left:50%;
+  top:0;
+  margin-left:-610px;
+}
+.headFigureContainer .headFigure .textContainer .text4Figure{
+  position:absolute;
+  top:100px;
+  left:40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+.headFigureContainer .headFigure .textContainer .text4Figure .title{
+  font-size:29px;
+  color:#47b180;
+  margin-bottom:20px;
+  font-weight:700;
+  border:0;
+}
+.headFigureContainer .headFigure .textContainer .text4Figure .slogan{
+  font-size:19px;
+  color:#7b7b7b;
+  text-align:left;
+  margin-bottom:30px;
+}
+p {
+  margin:0;
+  padding:0;
+}
+.headFigureContainer .headFigure .textContainer .text4Figure .btnGroup .btn4Developer{
+  width:143px;
+  height:43px;
+  line-height:43px;
+  background:#49b180;
+  color:#fff;
+  font-size:15px;
+  margin-right:10px;
+}
+.btn{
+  display:inline-block;
+  font-weight:400;
+  text-align:center;
+  cursor:pointer;
+  border-radius:4px;
+}
+.whiteBg{
+  background-color:#fff;
+}
+.linkSolutionContainer .linkSolution{
+  width:1220px;
+  position:relative;
+  top:0;
+  left:50%;
+  margin-left:-610px;
+}
+.paraTitle{
+  padding-top:38px;
+  padding-left:18px;
+}
+.paraTitle .cn{
+  font-size:20px;
+  color:#4d4d4d;
+}
+.paraTitle .en{
+  font-size:10px;
+  color:#999;
+  margin-left:15px;
+}
+.linkSolutionContainer .linkSolution .IPEquip{
+  display:flex;
+  flex-direction:column;
+  margin-top:60px;
+  align-items:center;
+  font-size:21px;
+  color:#4c4c4c;
+}
+.linkSolutionContainer .linkSolution .IPEquip .wifi{
+  margin-top:22px;
+  width:124px;
+  height:124px;
+}
+img{
+  max-width:100%;
+}
+.linkSolutionContainer .linkSolution .IPEquip .linkLine{
+  margin-top:16px;
+  width:8px;
+  height:38px;
+}
+.linkSolutionContainer .linkSolution .connectWay{
+  position:relative;
+  z-index:10;
+}
+.linkSolutionContainer .linkSolution .connectWay .light{
+  position:absolute;
+  top:25px;
+  left:0;
+}
+.smallPic{
+  width:50px;
+}
+.linkSolutionContainer .linkSolution .connectWay .wifiModel{
+  position:absolute;
+  top:-10px;
+  left:130px;
+}
+.bigPic{
+  width:104px;
+}
+.text-center{
+  text-align:ccenter!important;
+}
+.linkSolutionContainer .linkSolution .connectWay .socket{
+  position:absolute;
+  top:68px;
+  left:286px;
+}
+.linkSolutionContainer .linkSolution .connectWay .linux{
+  position:absolute;
+  top:30px;
+  left:396px;
+}
+.linkSolutionContainer .linkSolution .connectWay .camera{
+  position:absolute;
+  top:18px;
+  left:586px;
+}
+.linkSolutionContainer .linkSolution .connectWay .android{
+  position: absolute;
+  top: 30px;
+  right: 396px;
+}
+.linkSolutionContainer .linkSolution .connectWay .connectBox{
+  position: absolute;
+  top: 68px;
+  right: 286px
+}
+.linkSolutionContainer .linkSolution .connectWay .protocolconnection{
+  position: absolute;
+  top: -10px;
+  right: 130px;
+}
+.linkSolutionContainer .linkSolution .connectWay .route{
+  position: absolute;
+  top: 25px;
+  right: 0;
+}
+.smallPic img{
+  border-radius: 50%;
+}
+.bigPic img{
+  margin-bottom: 5px;
+}
+.bigPic p{
+  font-size: 16px;
+  color: #4c4c4c;
+  margin-top: 14px;
+}
+.bigPic img{
+  margin-bottom: 5px;
+}
+.linkSolutionContainer .waveContainer{
+  position: relative;
+  margin-top: 40px;
+  width: 100%;
+  height: 166px;
+  overflow: hidden;
+}
+.linkSolutionContainer .waveContainer .wave{
+  position: absolute;
+  left: 50%;
+  margin-left: -1500px;
+  width: 3000px;
+  height: 166px;
+  background-image: url(static/picture/bg_1@2x_9adb396.jpg);
+  background-repeat: repeat-x;
+  background-position: 300px 0;
+}
+.linkSolutionContainer .BLE_equip{
+  padding-top: 100px;
+  height: 500px;
+  background-color: #e6f9ff;
+  text-align: center;
+}
+.linkSolutionContainer .BLE_equip .BLETitle{
+  font-size: 21px;
+  color: #4c4c4c;
+  margin-bottom: 28px;
+}
+.linkSolutionContainer .BLE_equip .BLETitle{
+  font-size:21px;
+  color:#4c4c4c;
+  margin-bottom:28px;
+}
+.linkSolutionContainer .BLE_equip .BLEList{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+}
+.linkSolutionContainer .BLE_equip .BLEList .BLEItem{
+  width: 104px;
+  height: 104px;
+}
+.linkSolutionContainer .BLE_equip .BLEList .BLEItem p{
+  padding:5px 0 0;
+  width:101%;
+  font-size:16px;
+  line-height:32px;
+}
+.linkSolutionContainer .BLE_equip .BLEList .link{
+  width:38px;
+  height:8px;
+  margin:0 16px;
+}
+.linkProcesses{
+  height:496px;
+}
+.infoSection{
+  width:1220px;
+  margin:0 auto;
+}
+.infoSectionList{
+  margin-top:100px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+}
+.infoSectionItem{
+font-size: 16px;
+  color:#4c4c4c;
+  width:124px;
+  height:124px;
+}
+.infoSectionPic{
+  width:124px;
+  height:124px;
+  margin-bottom:15px;
+}
+.linkPic{
+  width:52px;
+  height:4px;
+  margin:0 20px;
+}
+.text-center{
+  text-align:center!important;
+}
+.platformResources {
+  padding-bottom:214px;
+}
+.platformResources .infoSectionItem:not(:last-child){
+  margin-right:92px;
+}
+.platformResources .resourcesText{
+ line-height:32px;
+}
+.grayBg{
+  background-color:#ededed;
+}
+.successfulCases{
+  padding-bottom:56px;
+}
+.successfulCases .caseList{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:38px;
+}
+.successfulCases .caseList img{
+  height:432px;
+  width:305px;
+}
+.Partners .partnerList{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:40px;
+  padding-bottom:74px;
+}
+.Partners .partnerList .partnerListItem{
+  transition:all .3s linear;
+  -moz-transition:all .3s linear;
+  -webkit-transition:all .3s linear;
+  width:304px;
+  height:134px;
+  background-color:#fff;
+  border:1px solid #f5f5f5;
+  margin:-1px;
+}
+.noHover{
+  cursor:default!important;
+  box-shadow:0 0 0 #fff!important;
+  transform:translate3d(0,0,0)!important;
+}
+.Partners .partnerList .partnerListItem img{
+  width:183px;
+  height:50px;
+  margin:22px;
+}
+.Partners .partnerList .partnerListItem a{
+  color:#676767; 
+}
+a{
+  text-decoration:none;
+}
+.footer{
+  width:100%;
+  height:190px;
+  background:#424242;
+  color:#eee;
+  text-align:center;
+  padding:0;
+  font-size:14px;
+}
+.footerInfo{
+  padding-top:78px;
+}
+.footer ul{
+  display:inline-block;
+  margin:0 0 5px;
+  padding:0;
+}
+.footer ul li{
+  display:inline-block;
+  padding:0 5px;
+  border-right:1px solid #eee;
+}
+.footer ul li a:visited{
+  color:#fff;
+}
+.footer a{
+  color:#4a4a4a;
+}
+.footer ul li a{
+  text-decoration:none;
+  border-bottom:0!important;
+}
+ul{
+  list-style:none;
+}
+.no-border{
+  border:0!important;
+}
+</style>
+</head>
+<body>
+	<div id="app" class="mainPanel">
+	   <div class="header-content">
+	      <nav class="nav block_header_nav">
+		     <div class="container">
+			    <div class="nav-left block_header_navleft">
+				   <a href="#" class="nav-item" style="padding: 0px;"><span class="logo-container"></span></a>
+				</div>
+				<ul class="nav-right block_header_list">
+				   <li class="nav-item"><a href="#" class="active">首页</a></li>
+				   <li class="nav-item has-point"><a href="#" class>开发引导</a></li>
+				</ul>
+				<div class="controlbar nav-right">
+				   <div class="unverifed" style="display: inline-block;">
+				      <a href="#" class="button-login button">登录</a>
+					  <span class="split-line">|</span>
+					  <a href="#" class="button-regist button">注册</a>
+				   </div>
+				</div>
+			 </div>
+		  </nav>
+	   </div>
+	   <div class="headFigureContainer">
+	      <div class="headFigure">
+		     <div class="nightCover">
+			    <img src="static/picture/banner_1_7a5ad8f.png" alt="" class="banner">
+			 </div>
+			 <div class="textContainer">
+			    <div class="text4Figure">
+				   <p class="title">小米IoT开发者平台</p>
+				   <p class="slogan">连接家与未来</p>
+				   <div class="btnGroup">
+				      <a href="#" class="btn btn4Developer">认证开发者资质</a>
+				   </div>
+				</div>
+			 </div>
+		  </div>
+	   </div>
+	   <div class="whiteBg">
+	      <div class="linkSolutionContainer">
+		     <div class="linkSolution">
+			    <div class="paraTitle">
+				   <span class="cn">接入方案</span>
+				   <span class="en">Link solutions</span>
+				</div>
+				<div class="IPEquip">
+				   IP设备
+				   <img src="static/picture/icon_ip_276d578.png" alt="" class="wifi">
+				   <img src="static/picture/link5_6008ba6.jpg" alt="" class="linkLine">
+				</div>
+				<div class="connectWay">
+				   <div class="light smallPic"><img src="static/picture/icon_light_735ec26.png" alt=""></div>
+				   <div class="wifiModel bigPic text-center"><img src="static/picture/icon_wifi_1059d93.png" alt=""><p>Wi-Fi 模组</p></div>
+				   <div class="socket smallPic"><img src="static/picture/icon_socket_f54fb65.png" alt=""></div>
+				   <div class="linux bigPic text-center"><img src="static/picture/icon_linux_17fba74.png" alt=""><p>Linux SDK</p></div>
+				   <div class="camera smallPic"><img src="static/picture/icon_camera_2877b9d.png" alt=""></div>
+				   <div class="android bigPic text-cener"><img src="static/picture/icon_android_5f045bf.png" alt=""><p>Android SDK</p></div>
+				   <div class="connectBox smallPic"><img src="static/picture/icon_box_dd0a45b.png" alt=""></div>
+				   <div class="protocolconnection bigPic text-center"><img src="static/picture/icon_protocolconnection_0f4192c.png" alt=""><p>协议对接</p></div>
+				   <div class="route smallPic"><img src="static/picture/icon_route_5e4b198.png" alt=""></div>
+				</div>
+			 </div>
+			 <div class="waveContainer">
+			    <div class="wave"></div>
+			 </div>
+			 <div class="BLE_equip">
+			    <p class="BLETitle">BLE设备</p>
+				<div class="BLEList">
+				  <div class="BLEItem">
+				     <img src="static/picture/icon_mible_d55efe1.png" alt="">
+				     <p>Mi Ble Service</p>
+				     <p>连接协议</p>
+				  </div>
+				<img src="static/picture/link4_40f5dc9.jpg" alt="" class="link">
+				<img src="static/picture/icon_ble_2877d00.png" alt="" width="124px" height="124px">
+				<img src="static/picture/link4_40f5dc9 (1).jpg" alt="" class="link">
+				<div class="BLEItem">
+				   <img src="static/picture/icon_mibeacon_a8a1cec.png" alt="">
+				   <p>Mi Beacon</p>
+				   <p>广播协议</p>
+				</div>
+			   </div>
+			 </div>
+		  </div>
+		  <div class="linkProcesses infoSection">
+		     <div class="paraTitle">
+			    <span class="cn">接入流程</span>
+				<span class="en">Link processes</span>
+			 </div>
+			 <div class="infoSectionList">
+			    <div class="infoSectionItem text-center">
+				   <img src="static/picture/icon_developer_b2d1ea2.png" alt="" class="infoSectionPic">开发者认证资质
+				</div>
+				<span class="linkPic">
+				   <img src="static/picture/link1_0b794d4.jpg" alt="">
+				</span>
+				<div class="infoSectionItem text-center">
+				   <img src="static/picture/icon_programme_1f731cf.png" alt="" class="infoSectionPic">确认接入方案
+				
+				</div>
+				<span class="linkPic">
+				   <img src="static/picture/link1_0b794d4.jpg" alt="">
+				</span>
+				<div class="infoSectionItem text-center">
+				   <img src="static/picture/icon_development_92a3bb2.png" alt="" class="infoSectionPic">     开发测试
+				</div>
+				<span class="linkPic">
+				   <img src="static/picture/link1_0b794d4.jpg" alt="">
+				</span>
+				<div class="infoSectionItem text-center">
+				   <img src="static/picture/icon_batch_83086ba.png" alt="" class="infoSectionPic">量产销售
+				</div>
+			 </div>
+		  </div>
+		  <div class="platformResources infoSection">
+		     <div class="paraTitle">
+			    <span class="cn">平台资源</span>
+				<span class="en">Platform resources</span>
+			 </div>
+			 <div class="infoSectionList">
+			    <div class="infoSectionItem text-center">
+				   <img src="static/picture/icon_technology_edf130f.png" alt="" class="infoSectionPic">
+				   <p class="resourcesText">整套技术解决</p>
+				   <p class="resourcesText">方案</p>
+				</div>
+				<div class="infoSectionItem text-center">
+				   <img src="static/picture/icon_interconnection_ee4af04.png" alt="" class="infoSectionPic">
+				   <p class="resourcesText">已有8500万设备</p>
+				   <p class="resourcesText">互通互联</p>
+				</div>
+				<div class="infoSectionItem text-center">
+				   <img src="static/picture/icon_cloud_1f779be.png" alt="" class="infoSectionPic">
+				   <p class="resourcesText">米家智能</p>
+				   <p class="resourcesText">云服务</p>
+				</div>
+				<div class="infoSectionItem text-center">
+				   <img src="static/picture/icon_extension_3d91582.png" alt="" class="infoSectionPic">
+				   <p class="resourcesText">米家商城平台</p>
+				   <p class="resourcesText">众筹推广</p>
+				</div>
+			 </div>
+		  </div>
+		  <div class="grayBg">
+		     <div class="successfulCases infoSection">
+			    <div class="paraTitle">
+				   <span class="cn">成功案例</span>
+				   <span class="en">Successful cases</span>
+				</div>
+				<div class="caseList">
+				   <img src="static/picture/bg_kongjing_9387887.png" alt="">	
+				   <img src="static/picture/bg_xiaoji_be62e84.png" alt="">	
+				   <img src="static/picture/bg_sushi_3d34c9f.png" alt="">	
+				   <img src="static/picture/bg_huacao_7fc87cb.png" alt="">	
+				</div>
+			 </div>
+			 <div class="Partners infoSection">
+			    <div class="paraTitle">
+				   <span class="cn">合作伙伴</span>
+				   <span class="en">Partners</span>
+				</div>
+				<div class="partnerList">
+				   <div class="partnerListItem text-center" style="border-top-left-radius: 10px;">
+				      <div><img src="static/picture/logo1.png" alt=""></div>
+					  <a href="#" target="blank">青米（北京）科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center">
+				      <div><img src="static/picture/logo2.jpg" alt=""></div>
+					  <a href="#" target="blank">上海润米科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center">
+				      <div><img src="static/picture/logo3.png" alt=""></div>
+					  <a href="#" target="blank">深圳绿米联创科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center"  style="border-top-left-radius: 10px;">
+				      <div><img src="static/picture/logo4.png" alt=""></div>
+					  <a href="#" target="blank">上海创米科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center">
+				      <div><img src="static/picture/logo5.png" alt=""></div>
+					  <a href="#" target="blank">万魔声学科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center">
+				      <div><img src="static/picture/logo6.png" alt=""></div>
+					  <a href="#" target="blank">无锡睿米信息技术有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center">
+				      <div><img src="static/picture/logo7.png" alt=""></div>
+					  <a href="#" target="blank">北京智米科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center">
+				      <div><img src="static/picture/logo8.png" alt=""></div>
+					  <a href="#" target="blank">江苏紫米电子技术有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center">
+				      <div><img src="static/picture/logo9.png" alt=""></div>
+					  <a href="#" target="blank">北京花花草草科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center">
+				      <div><img src="static/picture/logo10.png" alt=""></div>
+					  <a href="#" target="blank">青岛亿联客科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center">
+				      <div><img src="static/picture/logo11.png" alt=""></div>
+					  <a href="#" target="blank">佛山市云米电器科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center noHover">
+				      <div><img src="static/picture/logo12.png" alt=""></div>
+					  <a href="#" target="blank">北京悦米科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center" style="border-bottom-left-radius: 10px;">
+				      <div><img src="static/picture/logo13.png" alt=""></div>
+					  <a href="#" target="blank">上海纯米电子科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center">
+				      <div><img src="static/picture/logo14.png" alt=""></div>
+					  <a href="#" target="blank">北京爱和健康科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center noHover">
+				      <div><img src="static/picture/logo15.png" alt=""></div>
+					  <a href="#" target="blank">北京石头世纪科技有限公司</a>
+				   </div>
+				   <div class="partnerListItem text-center noHover" style="border-bottom-right-radius: 10px;"><p></p></div>
+				</div>
+			 </div>
+		  </div>
+		  <div class="footer">
+		     <div class="footerInfo">
+			    <ul>
+			    	<li><a href="#">小米网</a></li>
+			    	<li><a href="#">小米开放平台</a></li>
+			    	<li><a href="#">米家首页</a></li>
+			    	<li class="no-border"><a href="#">联系我们</a> Xiaomi Inc.</li>
+			    </ul>
+				<p>京ICP证110507号 京ICP备100463444号 京公网安备1101085212535号</p>
+			 </div>
+		  </div>
+	   </div>
+	</div>
+</body>
+</html>
