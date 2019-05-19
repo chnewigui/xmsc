@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+body{
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    color: #333;
+    background-color: #fff;
+    min-width: 1226px;
+}
+body{
+    margin: 0;
+}
+.site-header{
+    position: relative;
+    height: 100px;
+    border-bottom: none;
+    z-index: 1003;
+}
+.site-header .container{
+    position: relative;
+}
+.container{
+    width: 1226px;
+    *zoom: 1;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container:before, .container:after{
+    content: " ";
+    display: table;
+}
+.container:after{
+    clear: both;
+}
+.site-header .header-logo{
+    float: left;
+    width: 62px;
+    margin-top: 22px;
+    width: 150px;
+}
+.site-header .header-logo a{
+    display: inline-block;
+}
+.site-header .logo{
+    position: relative;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+    background: #ff6700 url(//s01.mifile.cn/i/mi-logo.png) no-repeat 50% 50%;
+}
+a{
+    color: #757575;
+    text-decoration: none;
+}
+.site-header .header-logo .qiyelogo{
+    width: 67px;
+    height: 50px;
+    background: url(//c1.mifile.cn/f/i/16/qiye2016/qiyelogo.png) 50% 50% no-repeat;
+    margin-left: 10px;
+}
+.site-header .header-nav{
+    float: left;
+}
+.site-header .nav-list{
+    position: relative;
+    z-index: 10;
+    float: left;
+    height: 88px;
+    margin: 0;
+    padding: 12px 0 0 30px;
+    list-style-type: none;
+    font-size: 16px;
+}
+.site-header .nav-item{
+    float: left;
+}
+.site-header .nav-item .link{
+    display: block;
+    padding: 26px 10px 38px;
+    color: #333;
+}
+.site-header .header-search{
+    float: right;
+    width: 296px;
+    margin-top: 25px;
+}
+.site-header .search-form{
+    position: relative;
+    width: 296px;
+    height: 50px;
+	margin: 0;
+}
+.hide{
+    display: none !important;
+}
+.site-header .search-text{
+    position: absolute;
+    top: 0;
+    right: 51px;
+    z-index: 1;
+    width: 223px;
+    height: 48px;
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    line-height: 48px;
+    outline: 0;
+    transition: all .2s;
+}
+input[type="search"]{
+    -webkit-appearance: textfield;
+	box-sizing: content-box;
+}
+input{
+    margin: 0;
+    font-family: sans-serif;
+}
+.site-header .search-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    width: 52px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    font-size: 24px;
+    line-height: 24px;
+    background: #fff;
+    color: #616161;
+    outline: 0;
+    transition: all .2s;
+}
+input[type="submit"]{
+    -webkit-appearance: button;
+    cursor: pointer;
+    border-radius: 0;
+}
+.site-header .search-form .keyword-list {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    _top: 51px;
+    z-index: 20;
+    width: 243px;
+    border: 1px solid #ff6700;
+    border-top: 0;
+    background: #fff;
+}
+.home-hero-container{
+    position: relative;
+}
+.home-hero-container .home-hero-slider{
+    height: 460px;
+    overflow: hidden;
+}
+.ui-wrapper{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.ui-wrapper .ui-viewport{
+    transform: translatez(0);
+}
+.home-hero-container .slide{
+    cursor: pointer;
+}
+.ui-wrapper img{
+    display: block;
+    max-width: 100%;
+}
+.row{
+    margin-left: -14px;
+}
+.span20{
+    width: 1226px;
+    float: left;
+    margin-left: 14px;
+    min-height: 1px;
+}
+.home-hero-container ul{
+    margin: 0;
+    padding: 0;
+    height: 159px;
+    margin-top: 15px;
+}
+.home-hero-container .home-hero-sub li.first{
+    margin-left: 0;
+}
+.home-hero-container .home-hero-sub li {
+    float: left;
+    width: 295px;
+    margin-left: 15px;
+    list-style: none;
+    cursor: pointer;
+}
+.home-hero-container .home-hero-sub li img{
+    width: 100%;
+    display: block;
+}
+img{
+    border: 0;
+}
+.home-hero-container a{
+    outline-style: none;
+}
+.home-goods-list{
+    background: #f5f5f5;
+    margin-top: 50px;
+    padding-top: 50px;
+}
+.home-goods-list .home-star-goods{
+    width: 1226px;
+    *zoom: 1;
+    margin-right: auto;
+    margin-left: auto;
+}
+.home-goods-list .home-star-goods .xm-plain-box .box-hd{
+    position: relative;
+    height: 58px;
+    -webkit-font-smoothing: antialiased;
+}
+.home-goods-list .home-star-goods .box-hd .title{
+    margin: 0;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 58px;
+    color: #333;
+}
+.home-goods-list .home-star-goods .xm-plain-box .box-hd .more{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.home-goods-list .home-star-goods .more-link{
+    font-size: 16px;
+    line-height: 58px;
+    color: #424242;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+.home-goods-list .home-star-goods .more-link .iconfont{
+    width: 12px;
+    height: 12px;
+    padding: 4px;
+    margin-left: 8px;
+    border-radius: 16px;
+    font-size: 12px;
+    line-height: 12px;
+    background: #b0b0b0;
+    color: #fff;
+    vertical-align: 1px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+.iconfont{
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+}
+.home-goods-list .home-star-goods .box-bd{
+    position: relative;
+    width: 1226px;
+}
+.home-goods-list .home-star-goods .carousel-list{
+    width: 1240px;
+}
+.home-goods-list .home-star-goods ul{
+    padding: 0;
+    margin-bottom: 15px;
+    margin-left: -14px;
+    float: left;
+}
+ul{
+    margin: 1em 0;
+}
+.home-goods-list .home-star-goods ul li{
+    height: 300px;
+    padding-top: 39px;
+    text-align: center;
+    background: #fff;
+    -webkit-transition: all .6s;
+    transition: all .6s;
+    position: relative;
+    list-style: none;
+    margin-bottom: 14px;
+    overflow: hidden;
+    _zoom: 1;
+    margin-left: 14px;
+    cursor: pointer;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.xm-carousel-col-5-list li{
+    float: left;
+    width: 234px;
+}
+.home-goods-list .home-star-goods ul .thumb{
+    display: block;
+    width: 160px;
+    margin: 0 auto 22px;
+}
+.home-goods-list .home-star-goods ul .thumb img{
+    width: 160px;
+    height: 160px;
+}
+.home-goods-list .home-star-goods ul .title, .home-goods-list .home-star-goods ul .title a{
+    margin: 0 20px 3px;
+    font-size: 14px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.home-goods-list .home-star-goods ul .title, .home-goods-list .home-star-goods ul .title a{
+    color: #212121;
+}
+.home-goods-list .home-star-goods ul .desc{
+    height: 18px;
+    margin: 0 20px 12px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    _zoom: 1;
+    color: #b0b0b0;
+}
+.purchasi-process{
+    background: #f5f5f5;
+    text-align: center;
+    padding-bottom: 105px;
+}
+.purchasi-process .container{
+    background: #fff;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+.purchasi-process{
+
+}
+.purchasi-process h2{
+    font-size: 35px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    color: #424242;
+}
+.purchasi-process p{
+    font-size: 14px;
+}
+p{
+    margin: 1em 0;
+}
+.purchasi-process .step{
+    background: url(step.jpg) 50% 0 no-repeat;
+    width: 758px;
+    height: 104px;
+    margin: 56px auto 20px;
+}
+.qiye-site-footer{
+    padding: 57px 0;
+}
+.qiye-site-footer ul{
+    margin: 0;
+    padding: 0;
+}
+.qiye-site-footer ul li:first-child{
+    border-left: 0;
+}
+.qiye-site-footer ul li{
+    list-style: none;
+    width: 25%;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    border-left: 1px solid #e0e0e0;
+    height: 41px;
+    line-height: 41px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.qiye-site-footer ul li a{
+    color: #616161;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+    display: block;
+    height: 41px;
+    line-height: 41px;
+}
+.qiye-site-footer ul li a .icon.icon01{
+    background-position: 0px 0px;
+}
+.qiye-site-footer ul li a .icon{
+    margin-right: 6px;
+    font-size: 24px;
+    line-height: 24px;
+    vertical-align: -14px;
+    background: url(qiye_siteFooter_icon.png) no-repeat top left;
+    width: 41px;
+    height: 41px;
+    display: inline-block;
+}
+.qiye-site-footer ul li a .icon.icon03{
+background-position: -82px 0px;
+}
+.qiye-site-footer ul li a .icon{
+    margin-right: 6px;
+    font-size: 24px;
+    line-height: 24px;
+    vertical-align: -14px;
+    background: url(qiye_siteFooter_icon.png) no-repeat top left;
+    width: 41px;
+    height: 41px;
+    display: inline-block;
+}
+.qiye-site-footer ul li a .icon.icon04 {
+    background-position: -123px 0px;
+}
+.qiye-site-footer ul li a .icon{
+    margin-right: 6px;
+    font-size: 24px;
+    line-height: 24px;
+    vertical-align: -14px;
+    background: url(qiye_siteFooter_icon.png) no-repeat top left;
+    width: 41px;
+    height: 41px;
+    display: inline-block;
+}
+.qiye-site-footer ul li a .icon.icon05{
+    background-position: -164px 0px;
+}
+.qiye-site-footer ul li a .icon{
+margin-right: 6px;
+    font-size: 24px;
+    line-height: 24px;
+    vertical-align: -14px;
+    background: url(qiye_siteFooter_icon.png) no-repeat top left;
+    width: 41px;
+    height: 41px;
+    display: inline-block;
+}
+</style>
+</head>
+<body>
+	<div class="site-header site-mini-header J_topBar">
+	   <div class="site-header-wrap">
+	      <div class="container">
+		     <div class="header-logo">
+			    <a href="#" class="logo"></a>
+				<a href="#" class="qiyelogo"></a>
+			 </div>
+			 <div class="header-nav">
+			    <ul class="nav-list J_navMainList clearfix">
+			    	<li class="nav-item"><a href="#" class="link"><span class="text">儿童节 ▪ 心选</span></a></li>
+			    	<li class="nav-item"><a href="#" class="link"><span class="text">手机 ▪ 平板</span></a></li>
+			    	<li class="nav-item"><a href="#" class="link"><span class="text">笔记本</span></a></li>
+					<li class="nav-item"><a href="#" class="link"><span class="text">家电</span></a></li>
+			    	<li class="nav-item"><a href="#" class="link"><span class="text">智能 ▪ 路由器</span></a></li>
+			    	<li class="nav-item"><a href="#" class="link"><span class="text">耳机 ▪ 音箱</span></a></li>
+			    	<li class="nav-item"><a href="#" class="link"><span class="text">生活 ▪ 儿童</span></a></li>
+			    	<li class="nav-item"><a href="#" class="link"><span class="text">配件 ▪ 车品</span></a></li>
+			    </ul>
+			 </div>
+			 <div class="header-search">
+			    <form action="" id="J_searchqiyeForm" class="search-form clearfix">
+				   <input class="search-text" type="search" id="search">
+				   <input type="submit" class="search-btn iconfont" value="">
+				   <div id="J_keywordList" class="keyword-list hide"><ul class="result-list"></ul></div>
+				</form>	
+			 </div>
+		  </div>
+	   </div>
+	</div>
+	<div class="home-hero-container container">
+	   <div class="home-hero">
+	      <div class="home-hero-slider">
+		     <div class="ui-wrapper" style="max-width: 100%;">
+			    <div class="ui-viewport" style="width: 100%; overflow: hidden; position: relative; height: 460px;">
+				   <div id="J_homeSlider" class="xm-slider">
+				      <div class="slide loaded" style="float: none; list-style: none; position: absolute; width: 1226px; z-index: 50; display: block;">
+					     <img src="a5b313f3-44e3-bdf8-066e-449cd0a9758c!1226x460.jpg" alt="">
+					  </div>
+				   </div>
+				</div>
+			 </div>
+		  </div>
+		  <div class="home-hero-sub row">
+		     <div class="span20" id="J_homePromo">
+			    <ul class="home-promo-list clearfix">
+				   <li class="first">
+				       <a href="#"><img src="942f691b-b271-f5c9-0c63-1b93b8f624e2.jpg" alt=""></a>
+				   </li>
+				   <li data-id="50">
+				       <a href="#"><img src="942f691b-b271-f5c9-0c63-1b93b8f624e2.jpg" alt=""></a>
+				   </li>
+				   <li data-id="296">
+				       <a href="#"><img src="942f691b-b271-f5c9-0c63-1b93b8f624e2.jpg" alt=""></a>
+				   </li>
+				   <li data-id="80">
+				       <a href="#"><img src="942f691b-b271-f5c9-0c63-1b93b8f624e2.jpg" alt=""></a>
+				   </li>
+				</ul>	
+			 </div>
+		  </div>
+	   </div>
+	</div>
+	<div class="home-goods-list">
+	   <div class="home-star-goods xm-carousel-container container is-visible">
+	      <div class="xm-plain-box">
+		     <div class="box-hd">
+			    <h2 class="title">儿童节 ▪ 心选</h2>
+				<div class="more J_brickNav">
+				   <a href="#" class="more-link">查看全部
+				      <i class="iconfont"></i>
+				   </a>
+				</div>
+			 </div>
+			 <div class="box-bd list">
+			    <ul class="carousel-list xm-carousel-col-5-list clearfix">
+				   <li data-id="789">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">米兔儿童电话手表3 4G</a>
+					  </h3>
+					  <p class="desc">米兔儿童电话手表3 4G</p>
+				   </li>
+				   <li data-id="513">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">米兔儿童滑板车</a>
+					  </h3>
+					  <p class="desc">米兔儿童滑板车</p>
+				   </li>
+				   <li data-id="790">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">米兔婴儿理发器</a>
+					  </h3>
+					  <p class="desc">米兔婴儿理发器</p>
+				   </li>
+				   <li data-id="92">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">米兔智能故事机</a>
+					  </h3>
+					  <p class="desc">能说会道，宝宝的好玩伴</p>
+				   </li>
+				   <li data-id="781">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">米兔折叠婴儿推车</a>
+					  </h3>
+					  <p class="desc">米兔折叠婴儿推车</p>
+				   </li>
+				</ul>
+			 </div>
+		  </div>
+	   </div>
+	   <div class="home-star-goods xm-carousel-container container is-visible">
+	      <div class="xm-plain-box">
+		     <div class="box-hd">
+			    <h2 class="title">手机 ▪ 平板</h2>
+				<div class="more J_brickNav">
+				   <a href="#" class="more-link">查看全部
+				      <i class="iconfont"></i>
+				   </a>
+				</div>
+			 </div>
+			 <div class="box-bd list">
+			    <ul class="carousel-list xm-carousel-col-5-list clearfix">
+				   <li data-id="789">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">小米9</a>
+					  </h3>
+					  <p class="desc">小米9</p>
+				   </li>
+				   <li data-id="513">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">Redmi Note 7 Pro</a>
+					  </h3>
+					  <p class="desc">Redmi Note 7 Pro</p>
+				   </li>
+				   <li data-id="790">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">小米MIX 3</a>
+					  </h3>
+					  <p class="desc">小米MIX 3</p>
+				   </li>
+				   <li data-id="92">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">黑鲨游戏手机 2</a>
+					  </h3>
+					  <p class="desc">黑鲨游戏手机 2</p>
+				   </li>
+				   <li data-id="781">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">小米平板4 8英寸LTE版 4GB内存</a>
+					  </h3>
+					  <p class="desc">小米平板4 8英寸LTE版 4GB内存</p>
+				   </li>
+				</ul>
+			 </div>
+		  </div>
+	   </div>
+	   <div class="home-star-goods xm-carousel-container container is-visible">
+	      <div class="xm-plain-box">
+		     <div class="box-hd">
+			    <h2 class="title">笔记本</h2>
+				<div class="more J_brickNav">
+				   <a href="#" class="more-link">查看全部
+				      <i class="iconfont"></i>
+				   </a>
+				</div>
+			 </div>
+			 <div class="box-bd list">
+			    <ul class="carousel-list xm-carousel-col-5-list clearfix">
+				   <li data-id="789">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">小米笔记本15.6" 2019款 独显版</a>
+					  </h3>
+					  <p class="desc">小米笔记本15.6" 2019款 独显版</p>
+				   </li>
+				   <li data-id="513">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">小米笔记本Pro 15.6" 2019款</a>
+					  </h3>
+					  <p class="desc">小米笔记本Pro 15.6" 2019款</p>
+				   </li>
+				   <li data-id="790">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">Air 13.3" 2019款</a>
+					  </h3>
+					  <p class="desc">Air 13.3" 2019款</p>
+				   </li>
+				   <li data-id="92">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">小米笔记本Air 12.5</a>
+					  </h3>
+					  <p class="desc">小米笔记本Air 12.5</p>
+				   </li>
+				   <li data-id="781">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">小米游戏本 15.6英寸</a>
+					  </h3>
+					  <p class="desc">小米游戏本 15.6英寸</p>
+				   </li>
+				</ul>
+			 </div>
+		  </div>
+	   </div>
+	   <div class="home-star-goods xm-carousel-container container is-visible">
+	      <div class="xm-plain-box">
+		     <div class="box-hd">
+			    <h2 class="title">家电</h2>
+				<div class="more J_brickNav">
+				   <a href="#" class="more-link">查看全部
+				      <i class="iconfont"></i>
+				   </a>
+				</div>
+			 </div>
+			 <div class="box-bd list">
+			    <ul class="carousel-list xm-carousel-col-5-list clearfix">
+				   <li data-id="789">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">小米电视4S 55英寸</a>
+					  </h3>
+					  <p class="desc">小米电视4S 55英寸</p>
+				   </li>
+				   <li data-id="513">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">米家互联网空调 </a>
+					  </h3>
+					  <p class="desc">米家互联网空调 </p>
+				   </li>
+				   <li data-id="790">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">米家直流变频落地扇</a>
+					  </h3>
+					  <p class="desc">米家直流变频落地扇</p>
+				   </li>
+				   <li data-id="92">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">米家互联网洗烘一体机10kg 白色</a>
+					  </h3>
+					  <p class="desc">米家互联网洗烘一体机10kg 白色</p>
+				   </li>
+				   <li data-id="781">
+				      <a href="#" class="thumb">
+					     <img src="0406a950-e5f1-4edf-21d6-9a9cdf3d3054!200x200.png" alt="">
+					  </a>
+					  <h3 class="title">
+					     <a href="#">小米米家空气净化器 2S 白色</a>
+					  </h3>
+					  <p class="desc">经典再升级，好空气看得见</p>
+				   </li>
+				</ul>
+			 </div>
+		  </div>
+	   </div>
+	</div>
+	<div class="purchasi-process">
+	   <div class="container">
+	      <h2>采购流程</h2>
+		  <p>采购仅需4步，2个工作日内完成审核，到账后5个工作日内发货</p>
+		  <div class="step"></div>
+	   </div>
+	</div>
+	<div class="qiye-site-footer">
+	   <div class="container">
+	      <div class="footer-links">
+		     <ul class="list-service clearfix">
+			    <li>
+				   <a href="#">
+				      <i class="icon icon01"></i>新浪微博
+				   </a>
+				</li>
+				<li>
+				   <a href="#">
+				      <i class="icon icon03"></i>官方微信
+				   </a>
+				</li>
+				<li>
+				   <a href="#">
+				      <i class="icon icon04"></i>24小时在线客服
+				   </a>
+				</li>
+				<li>
+				   <a href="#">
+				      <i class="icon icon05"></i>010-53287305
+				   </a>
+				</li>
+			 </ul>
+		  </div>
+	   </div>
+	</div>
+</body>
+</html>
